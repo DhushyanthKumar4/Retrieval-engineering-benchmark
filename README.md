@@ -25,6 +25,9 @@ This project investigated retrieval as a complete systems problem spanning:
 •	Experiment tracking 
 •	Evaluation methodology 
 •	Retrieval diagnostics 
+
 A central outcome of the work was demonstrating that retrieval performance depends not only on ranking architectures, but also on corpus construction, indexing strategy, benchmark design, and system-level constraints.
+
 Rather than focusing exclusively on model performance, the project emphasized reproducible benchmarking, engineering tradeoffs, and evaluation rigor under realistic resource limitations.
+
 The resulting system demonstrates practical experience with retrieval engineering, vector search infrastructure, ranking systems, experimental design, and production-oriented AI system development - skills that directly transfer to modern search, recommendation, and retrieval-augmented AI platforms.
