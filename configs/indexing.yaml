@@ -1,0 +1,5 @@
+index:
+  type: hnsw
+  metric: cosine
+  ef_search: 128
+  ef_construction: 200
