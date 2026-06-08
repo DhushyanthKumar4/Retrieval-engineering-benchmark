@@ -57,7 +57,15 @@
 │ Recall@K                     │
 │ MRR                          │
 │ nDCG                         │
-│ Latency                      │OFFLINE PIPELINE
+│ Latency                      │
+
+
+
+
+
+
+
+OFFLINE PIPELINE
 
 TyDiQA Corpus
         │
