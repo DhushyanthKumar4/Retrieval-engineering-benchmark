@@ -1,0 +1,178 @@
+BM25_Results:
+
+	System	Recall@1	Recall@5	Recall@10	MRR	nDCG	Avg_Latency_ms	P95_Latency_ms	QPS	Memory_MB
+0	BM25	0.0	0.002	0.002	0.0007	0.0010	155.916	295.470	6.41	10580.03
+1	Dense	0.0	0.002	0.002	0.0005	0.0009	14.959	21.788	66.85	10580.03
+2	Hybrid	0.0	0.002	0.002	0.0007	0.0010	163.107	302.518	6.13	10580.03
+
+
+
+
+    
+dense_results:
+
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 34.1 MB/s eta 0:00:00
+================================================================================
+Loading Retrieval Assets
+================================================================================
+Chunks: 48,573
+Indexed Vectors: 48,573
+
+================================================================================
+Loading Dense Retrieval Model
+================================================================================
+Device: cuda
+Loading weights: 100%
+ 199/199 [00:00<00:00, 496.32it/s]
+Model Loaded Successfully
+
+================================================================================
+Creating Evaluation Queries
+================================================================================
+Queries: 1,000
+
+================================================================================
+Dense Retrieval Benchmark
+================================================================================
+100%
+ 1000/1000 [00:14<00:00, 71.63it/s]
+Average Latency: 14.804 ms
+P95 Latency: 21.411 ms
+QPS: 67.55
+
+================================================================================
+Example Retrieval
+================================================================================
+Query: కాల్గరీ
+document_title	language	chunk_text
+42474	కాల్గరీ	telugu	మార్చిలో నగర కౌన్సిల్‌ తీర్మానించింది. ఈ మేరకు...
+40574	కాల్గరీ	telugu	తరబడి ఈ పరిస్థితులు కొనసాగుతాయి. పశ్చిమం నుంచి...
+42378	కాల్గరీ	telugu	నగరంగా అవతరించింది. 1988 ఫిబ్రవరి నాటికి ఈ పరి...
+44130	కాల్గరీ	telugu	కాల్గరీ నిలయం. పశ్చిమ కెనడాలోకెల్లా అతి పెద్ద ...
+43363	పంజీరి	telugu	పంజీరి పాకిస్తాన్ మరియు భారతదేశంలో గల పంజాబ్ ప...
+
+================================================================================
+Dense Retrieval Benchmark Summary
+================================================================================
+                 Metric      Value
+0           Corpus Size  48573.000
+1                 Top K     10.000
+2  Average Latency (ms)     14.804
+3      P95 Latency (ms)     21.411
+4    Queries Per Second     67.550
+
+================================================================================
+Saving Artifacts
+================================================================================
+dense_retrieval_benchmark.csv
+
+================================================================================
+Step 8 Completed Successfully
+================================================================================
+document_title	language	chunk_text
+12281	Timeline of the telephone	english	1879. 10 September 1879: Connolly and McTighe ...
+11719	Timeline of the telephone	english	Somerville, Massachusetts at 109 Court Street ...
+10512	Timeline of the telephone	english	first international telephone call over telegr...
+11847	Timeline of the telephone	english	the Bell System installed in Norfolk, Virginia...
+13154	AM broadcasting	english	much like the telegraph had preceded the inven...
+13157	Timeline of the telephone	english	Matter: The Forgotten Story of the Telephone, ...
+45867	โทรศัพท์เคลื่อนที่	thai	โทรศัพท์มือถือ หรือ โทรศัพท์เคลื่อนที่ (บ้างเร...
+10201	Early history of video games	english	entertainment games.[4] The ancestors to these...
+38746	Simu	swahili	Simu (kutoka Kiarabu سیم, sim, inayomaanisha "...
+22650	Telepon	indonesian	negara. Telepon digital Public Switched Teleph...
+
+
+
+
+
+hybrid_results:
+
+================================================================================
+Loading Retrieval Assets
+================================================================================
+Corpus Size: 48,573
+Indexed Vectors: 48,573
+
+================================================================================
+Loading Dense Retrieval Model
+================================================================================
+Loading weights: 100%
+ 199/199 [00:00<00:00, 771.94it/s]
+Device: cuda
+
+================================================================================
+Hybrid Retrieval Configuration
+================================================================================
+TOP_K: 10
+RRF Constant: 60
+
+================================================================================
+Creating Evaluation Queries
+================================================================================
+Queries: 1,000
+
+================================================================================
+Running Hybrid Benchmark
+================================================================================
+100%
+ 1000/1000 [01:22<00:00, 11.33it/s]
+Average Latency: 81.797 ms
+P95 Latency: 164.721 ms
+QPS: 12.23
+
+================================================================================
+Hybrid Retrieval Example
+================================================================================
+Query: కాల్గరీ
+document_title	language	chunk_text
+40574	కాల్గరీ	telugu	తరబడి ఈ పరిస్థితులు కొనసాగుతాయి. పశ్చిమం నుంచి...
+42474	కాల్గరీ	telugu	మార్చిలో నగర కౌన్సిల్‌ తీర్మానించింది. ఈ మేరకు...
+40794	కాల్గరీ	telugu	వారు ముందే ఒప్పుకుని పెద్దగా పట్టించుకోలేదన్న ...
+42378	కాల్గరీ	telugu	నగరంగా అవతరించింది. 1988 ఫిబ్రవరి నాటికి ఈ పరి...
+44130	కాల్గరీ	telugu	కాల్గరీ నిలయం. పశ్చిమ కెనడాలోకెల్లా అతి పెద్ద ...
+
+================================================================================
+Hybrid Benchmark Summary
+================================================================================
+                 Metric      Value
+0           Corpus Size  48573.000
+1                 Top K     10.000
+2  Average Latency (ms)     81.797
+3      P95 Latency (ms)    164.721
+4    Queries Per Second     12.230
+
+================================================================================
+Saving Artifacts
+================================================================================
+hybrid_retrieval_benchmark.csv
+
+================================================================================
+document_title	language	chunk_text
+13601	Adolphe Sax	english	Antoine-Joseph "Adolphe" Sax (French pronuncia...
+12281	Timeline of the telephone	english	1879. 10 September 1879: Connolly and McTighe ...
+10178	Velcro	english	Velcro BVBA is a privately held company that p...
+10512	Timeline of the telephone	english	first international telephone call over telegr...
+16750	Peter Drucker	finnish	366 Days of Insight and Motivation for Getting...
+11719	Timeline of the telephone	english	Somerville, Massachusetts at 109 Court Street ...
+9113	Hypatia	english	Scholasticus's in his Bibliotheke.[193] In his...
+10508	Hypatia	english	on Apollonius's advanced mathematics or the as...
+11847	Timeline of the telephone	english	the Bell System installed in Norfolk, Virginia...
+23813	フィロ・ファーンズワース	japanese	フィロ・テイラー・ファーンズワース(英: Philo Taylor Farnsworth、1...
+
+                          
+
+
+
+latency_results:
+
+Optimization Summary
+
+Metric	Value
+0	Baseline Embedding Latency (ms)	12.300
+1	Cached Embedding Latency (ms)	14.476
+2	Mixed Precision Latency (ms)	19.046
+3	Baseline Retrieval Latency (ms)	0.302
+4	Optimized Retrieval Latency (ms)	1.365
+5	Embedding Throughput (QPS)	81.300
+6	Retrieval Throughput (QPS)	732.490
+7	Memory Usage (MB)	10608.130
