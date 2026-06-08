@@ -1,0 +1,111 @@
+┌──────────────────────────────┐
+│        User Query            │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│ Query Preprocessing Layer    │
+│ • Unicode Normalization      │
+│ • Language Detection         │
+│ • Query Cleaning             │
+└──────────────┬───────────────┘
+               │
+     ┌─────────┴─────────┐
+     │                   │
+     ▼                   ▼
+
+┌─────────────────┐   ┌─────────────────────┐
+│ BM25 Retrieval  │   │ Dense Retrieval     │
+│                 │   │ BGE-M3 Embeddings   │
+│ Sparse Search   │   │ FAISS HNSW Index    │
+└───────┬─────────┘   └─────────┬───────────┘
+        │                       │
+        └─────────┬─────────────┘
+                  ▼
+
+┌──────────────────────────────┐
+│ Hybrid Fusion Layer          │
+│                              │
+│ • Reciprocal Rank Fusion     │
+│ • Weighted Fusion            │
+└──────────────┬───────────────┘
+               ▼
+
+┌──────────────────────────────┐
+│ Candidate Selection          │
+│ Top 50 Documents             │
+└──────────────┬───────────────┘
+               ▼
+
+┌──────────────────────────────┐
+│ Cross Encoder Reranker       │
+│                              │
+│ ms-marco-MiniLM-L6-v2        │
+└──────────────┬───────────────┘
+               ▼
+
+┌──────────────────────────────┐
+│ Final Top-K Results          │
+│                              │
+│ Ranked Retrieval Output      │
+└──────────────┬───────────────┘
+               ▼
+
+┌──────────────────────────────┐
+│ Evaluation Layer             │
+│                              │
+│ Recall@K                     │
+│ MRR                          │
+│ nDCG                         │
+│ Latency                      │OFFLINE PIPELINE
+
+TyDiQA Corpus
+        │
+        ▼
+Document Cleaning
+        │
+        ▼
+Chunking
+(256 words / 50 overlap)
+        │
+        ▼
+BGE-M3 Embeddings
+        │
+        ▼
+FAISS HNSW Index
+        │
+        ▼
+Retrieval Store
+
+
+────────────────────────────────────
+
+
+ONLINE PIPELINE
+
+User Query
+        │
+        ▼
+Preprocessing
+        │
+        ▼
+BM25  +  Dense Retrieval
+        │
+        ▼
+Hybrid Fusion
+        │
+        ▼
+Cross Encoder Reranker
+        │
+        ▼
+Final Results
+        │
+        ▼
+Evaluation Dashboard
+│ Throughput                   │
+└──────────────────────────────┘
+
+
+
+
+
