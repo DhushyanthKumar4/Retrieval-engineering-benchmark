@@ -1,0 +1,11 @@
+faiss-cpu or faiss-gpu
+numpy
+pandas
+scikit-learn
+sentence-transformers
+transformers
+torch
+fastapi
+uvicorn
+mlflow
+tqdm
