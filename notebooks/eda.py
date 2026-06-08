@@ -399,3 +399,132 @@ print("""
 """)
 
 print("\nEDA Completed Successfully")
+
+
+Results:
+
+Dataset Summary
+================================================================================
+Metric	Value
+0	Total QA Pairs	166916.000000
+1	Total Languages	11.000000
+2	Average Question Length	5.491301
+3	Average Passage Length	2335.611296
+4	Average Document Characters	17810.803835
+5	Maximum Passage Length	106469.000000
+6	Maximum Question Length	1344.000000
+
+
+================================================================================
+Language Distribution
+================================================================================
+count
+telugu	24558
+arabic	23092
+swahili	17613
+japanese	16288
+finnish	15285
+indonesian	14952
+russian	12803
+thai	11365
+korean	10981
+bengali	10768
+english	9211
+
+dtype: int64
+
+
+
+================================================================================
+Question Length Distribution
+================================================================================
+
+
+
+================================================================================
+Document Length Distribution
+================================================================================
+
+
+
+================================================================================
+Long Document Analysis
+================================================================================
+Documents > 1000 words: 52.82%
+
+
+================================================================================
+Chunking Complexity Analysis
+================================================================================
+Average Chunks Per Document: 9.63
+Maximum Chunks Per Document: 416
+
+
+
+================================================================================
+Semantic Structure Analysis
+================================================================================
+modules.json: 100%
+ 229/229 [00:00<00:00, 13.2kB/s]
+config_sentence_transformers.json: 100%
+ 122/122 [00:00<00:00, 8.16kB/s]
+README.md: 100%
+ 3.89k/3.89k [00:00<00:00, 269kB/s]
+sentence_bert_config.json: 100%
+ 53.0/53.0 [00:00<00:00, 5.55kB/s]
+config.json: 100%
+ 645/645 [00:00<00:00, 44.3kB/s]
+model.safetensors: 100%
+ 471M/471M [00:05<00:00, 89.0MB/s]
+Loading weights: 100%
+ 199/199 [00:00<00:00, 4575.67it/s]
+tokenizer_config.json: 100%
+ 526/526 [00:00<00:00, 53.7kB/s]
+tokenizer.json: 100%
+ 9.08M/9.08M [00:00<00:00, 17.4MB/s]
+special_tokens_map.json: 100%
+ 239/239 [00:00<00:00, 24.2kB/s]
+config.json: 100%
+ 190/190 [00:00<00:00, 16.7kB/s]
+Batches: 100%
+ 32/32 [00:01<00:00, 27.31it/s]
+Batches: 100%
+ 32/32 [00:05<00:00,  5.82it/s]
+
+Average Question-Document Similarity: 0.5337
+
+
+
+================================================================================
+Embedding Cluster Visualization
+================================================================================
+
+
+
+================================================================================
+Vocabulary Overlap Analysis
+================================================================================
+
+
+
+================================================================================
+Hypothesis Validation
+================================================================================
+
+1. Dense Retrieval is expected to outperform BM25
+   because semantic similarity exists across languages.
+
+2. Hybrid Retrieval should improve recall
+   by combining lexical and semantic matching.
+
+3. Long documents generate many chunks,
+   increasing retrieval complexity.
+
+4. Multilingual embedding clusters indicate
+   strong cross-lingual retrieval potential.
+
+5. Retrieval benchmarking is necessary because
+   language distributions are highly imbalanced.
+
+
+EDA Completed Successfully
