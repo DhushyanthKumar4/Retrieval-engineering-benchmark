@@ -1,0 +1,4 @@
+retrieval:
+  top_k: 10
+  method: hybrid  # bm25 / dense / hybrid
+  fusion: rrf
