@@ -43,6 +43,9 @@ After Cleaning	21,578
 Training Split	15,104
 Validation Split	3,237
 Test Split	3,237
+
+
+
 2. Retrieval Corpus Construction
 Chunking Strategy
 
@@ -63,6 +66,9 @@ To fit GPU and memory constraints:
 Metric	Value
 Final Retrieval Corpus	48,573 chunks
 Embedding Dimension	768
+
+
+
 3. Embedding Benchmark
 Models Evaluated
 Model
@@ -84,6 +90,9 @@ Embedded Chunks	48,573
 Embedding Dimension	768
 Total Runtime	1549.9 sec
 Throughput	31.34 chunks/sec
+
+
+
 4. Vector Index Benchmark
 Index Types Evaluated
 Flat Index
@@ -109,6 +118,9 @@ Why?
 Lowest retrieval latency
 Excellent ANN quality
 Production-grade scalability
+
+
+
 5. Retrieval Architecture
 User Query
       │
@@ -128,6 +140,9 @@ Cross Encoder
       │
       ▼
 Top 10 Results
+
+
+
 6. BM25 Baseline
 Performance
 Metric	Value
@@ -136,6 +151,9 @@ Build Time	9.18 sec
 Avg Latency	54.24 ms
 P95 Latency	112.97 ms
 Throughput	18.44 QPS
+
+
+
 7. Dense Retrieval
 Architecture
 Query
@@ -157,6 +175,9 @@ Dense retrieval achieved:
 ~3.2× lower latency than BM25
 ~3.2× higher throughput
 Better multilingual semantic matching
+
+
+
 8. Hybrid Retrieval
 Methods
 Reciprocal Rank Fusion (RRF)
@@ -169,6 +190,9 @@ Throughput	12.23 QPS
 Tradeoff
 
 Hybrid retrieval improves robustness but increases latency due to dual retrieval execution.
+
+
+
 
 9. Cross Encoder Reranking
 Model
@@ -187,6 +211,9 @@ Throughput	2.52 QPS
 Key Insight
 
 Cross-encoders dramatically increase computational cost and should only operate on a small candidate set.
+
+
+
 
 10. Evaluation Findings
 Important Limitation Discovered
@@ -218,6 +245,9 @@ The low retrieval metrics were caused by corpus coverage issues rather than retr
 
 This is a realistic retrieval engineering failure mode and was documented through systematic error analysis.
 
+
+
+
 11. Error Analysis Findings
 Major Failure Modes
 Corpus Coverage Failure
@@ -239,6 +269,9 @@ Dense Retrieval Limitations
 
 Dense retrieval occasionally retrieved semantically related but incorrect documents.
 
+
+
+
 12. Systems Optimization
 Techniques Evaluated
 Embedding cache
@@ -250,6 +283,9 @@ Metric	Value
 Embedding Throughput	81.30 QPS
 Retrieval Throughput	732.49 QPS
 Memory Usage	10.6 GB
+
+
+
 13. Deployment
 Production Components
 API Layer
@@ -267,6 +303,9 @@ multilingual-e5-base
 Experiment Tracking
 
 MLflow
+
+
+
 
 14. Key Engineering Contributions
 
@@ -291,6 +330,9 @@ This project demonstrates:
 ✅ MLflow experiment tracking
 
 ✅ End-to-end retrieval pipeline design
+
+
+
 
 15. Final Reflection
 
