@@ -8,10 +8,10 @@ Query → Retrieval → (BM25 / Dense / Hybrid) → Reranker → Final Results
 
 
 Key results table:
-	System	Recall@1	Recall@5	Recall@10	MRR	nDCG	Avg_Latency_ms	P95_Latency_ms	QPS	Memory_MB
-0	BM25	0.0	0.002	0.002	0.0007	0.0010	155.916	295.470	6.41	10580.03
-1	Dense	0.0	0.002	0.002	0.0005	0.0009	14.959	21.788	66.85	10580.03
-2	Hybrid	0.0	0.002	0.002	0.0007	0.0010	163.107	302.518	6.13	10580.03
+	System	Recall@1	Recall@5	Recall@10	MRR		nDCG	Avg_Latency_ms	P95_Latency_ms	QPS		Memory_MB
+0	BM25	0.0			0.002		0.002		0.0007	0.0010	155.916			295.470			6.41	10580.03
+1	Dense	0.0			0.002		0.002		0.0005	0.0009	14.959			21.788			66.85	10580.03
+2	Hybrid	0.0			0.002		0.002		0.0007	0.0010	163.107			302.518			6.13	10580.03
 
 
 Key insights:
